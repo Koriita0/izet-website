@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { GraduationCap, Clock, Phone, Mail, MapPin, CheckCircle, Building, Users, Globe } from "lucide-react"
@@ -40,9 +41,13 @@ export default function HomePage() {
               </div>
             </div>
             <div className="relative">
-              <div className="w-full aspect-[16/9] rounded-lg shadow-2xl bg-gradient-to-br from-[color:var(--muted)] to-white flex items-center justify-center">
-                <div className="text-gray-400">Espacio para fotografía (reemplazar)</div>
-              </div>
+              <Image
+                src="/images/campus/IMG-20251021-WA0027.jpg"
+                alt="Campus IZET"
+                width={600}
+                height={400}
+                className="w-full rounded-lg shadow-2xl object-cover aspect-[16/9]"
+              />
             </div>
           </div>
         </div>
@@ -57,20 +62,38 @@ export default function HomePage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-[color:var(--muted)] rounded-lg p-6">
-              <div className="w-full aspect-[4/3] bg-white rounded-md mb-4 flex items-center justify-center text-gray-400">Foto Belleza</div>
+            <div className="bg-[color:var(--muted)] rounded-lg p-6 overflow-hidden">
+              <Image
+                src="/images/campus/IMG-20251021-WA0047.jpg"
+                alt="Curso Belleza Integral"
+                width={300}
+                height={225}
+                className="w-full rounded-md mb-4 object-cover aspect-[4/3]"
+              />
               <h3 className="font-bold text-[color:var(--foreground)] mb-2">Belleza Integral</h3>
               <p className="text-sm text-gray-600">Formación en estilismo, maquillaje, uñas y estética.</p>
             </div>
 
-            <div className="bg-[color:var(--muted)] rounded-lg p-6">
-              <div className="w-full aspect-[4/3] bg-white rounded-md mb-4 flex items-center justify-center text-gray-400">Foto Barbería</div>
+            <div className="bg-[color:var(--muted)] rounded-lg p-6 overflow-hidden">
+              <Image
+                src="/images/campus/IMG-20251021-WA0082.jpg"
+                alt="Barbería Profesional"
+                width={300}
+                height={225}
+                className="w-full rounded-md mb-4 object-cover aspect-[4/3]"
+              />
               <h3 className="font-bold text-[color:var(--foreground)] mb-2">Barbero Profesional</h3>
               <p className="text-sm text-gray-600">Técnicas de corte y arreglo de barba con enfoque profesional.</p>
             </div>
 
-            <div className="bg-[color:var(--muted)] rounded-lg p-6">
-              <div className="w-full aspect-[4/3] bg-white rounded-md mb-4 flex items-center justify-center text-gray-400">Foto Inglés</div>
+            <div className="bg-[color:var(--muted)] rounded-lg p-6 overflow-hidden">
+              <Image
+                src="/images/campus/IMG-20251021-WA0049.jpg"
+                alt="Idioma Inglés"
+                width={300}
+                height={225}
+                className="w-full rounded-md mb-4 object-cover aspect-[4/3]"
+              />
               <h3 className="font-bold text-[color:var(--foreground)] mb-2">Idioma Inglés</h3>
               <p className="text-sm text-gray-600">Cursos intensivos y carrera técnica para dominar el idioma.</p>
             </div>
@@ -157,7 +180,13 @@ export default function HomePage() {
             </div>
 
             <div>
-              <div className="w-full aspect-[16/9] rounded-lg bg-[color:var(--muted)] flex items-center justify-center">Foto campus / estudiantes (reemplazar)</div>
+              <Image
+                src="/images/campus/IMG-20251021-WA0049.jpg"
+                alt="Campus IZET - Sobre Nosotros"
+                width={600}
+                height={400}
+                className="w-full aspect-[16/9] rounded-lg object-cover"
+              />
             </div>
           </div>
 
@@ -183,10 +212,16 @@ export default function HomePage() {
                 <p className="text-gray-700 text-sm">IZET nace para responder a la necesidad de formación técnica en Zacatecas, ofreciendo programas prácticos con orientación laboral desde sus primeros ciclos. A lo largo de los años, hemos consolidado vínculos con empresas locales y actualizado nuestros planes para adaptarlos a las demandas del mercado.</p>
               </div>
               <div>
-                <h4 className="font-semibold mb-3">Ubicación</h4>
-                <p className="text-gray-700 text-sm mb-4">Zacatecas, México. Campus con acceso cercano a transporte público y servicios.</p>
-                <div className="w-full aspect-[4/3] bg-[color:var(--muted)] rounded-md flex items-center justify-center">Mapa (placeholder)</div>
-              </div>
+              <h4 className="font-semibold mb-3">Ubicación</h4>
+              <p className="text-gray-700 text-sm mb-4">Zacatecas, México. Campus con acceso cercano a transporte público y servicios.</p>
+              <Image
+                src="/images/campus/IMG-20251021-WA0075.jpg"
+                alt="Ubicación Campus IZET"
+                width={400}
+                height={300}
+                className="w-full aspect-[4/3] rounded-md object-cover"
+              />
+            </div>
             </div>
           </div>
         </div>
@@ -203,9 +238,15 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto space-y-12">
             {/* Program card - image left, text right */}
             <div className="grid md:grid-cols-2 items-center gap-8">
-              <div className="order-1 md:order-none">
-                <div className="w-full aspect-[4/3] rounded-lg bg-[color:var(--muted)] flex items-center justify-center">Imagen programa: Belleza (placeholder)</div>
-              </div>
+              <div>
+              <Image
+                src="/images/campus/IMG-20251021-WA0050.jpg"
+                alt="Programa Belleza Integral"
+                width={400}
+                height={300}
+                className="w-full aspect-[4/3] rounded-lg object-cover"
+              />
+            </div>
               <div>
                 <h3 className="text-2xl font-bold text-[color:var(--foreground)] mb-3">Belleza Integral — Formación práctica y certificada</h3>
                 <p className="text-gray-700 mb-4">Programa líder en estilismo, maquillaje profesional, alaciado, colorimetría, extensiones de pestaña y uñas. Duración típica: 3 meses por curso. Al completar, recibes constancia oficial del instituto y portafolio práctico.</p>
@@ -238,14 +279,26 @@ export default function HomePage() {
                 </div>
               </div>
               <div>
-                <div className="w-full aspect-[4/3] rounded-lg bg-[color:var(--primary)] flex items-center justify-center text-white">Imagen Inglés (placeholder)</div>
+                <Image
+                  src="/images/campus/IMG-20251021-WA0054.jpg"
+                  alt="Curso Inglés Intensivo"
+                  width={400}
+                  height={300}
+                  className="w-full aspect-[4/3] rounded-lg object-cover"
+                />
               </div>
             </div>
 
             {/* Program card - image left, text right */}
             <div className="grid md:grid-cols-2 items-center gap-8">
               <div>
-                <div className="w-full aspect-[4/3] rounded-lg bg-[color:var(--muted)] flex items-center justify-center">Imagen programa: Barbero (placeholder)</div>
+                <Image
+                  src="/images/campus/IMG-20251021-WA0055.jpg"
+                  alt="Barbería Profesional"
+                  width={400}
+                  height={300}
+                  className="w-full aspect-[4/3] rounded-lg object-cover"
+                />
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-[color:var(--foreground)] mb-3">Barbero Profesional — Técnicas y emprendimiento</h3>
@@ -271,7 +324,13 @@ export default function HomePage() {
           {/* Beauty courses - guinda background, image left */}
           <div className="grid md:grid-cols-2 items-center gap-8 bg-[color:var(--primary)] text-white rounded-lg p-8">
             <div className="order-1 md:order-none">
-              <div className="w-full aspect-[4/3] bg-white/10 rounded-md flex items-center justify-center">Foto Cursos de Belleza (placeholder)</div>
+              <Image
+                src="/images/campus/IMG-20251021-WA0056.jpg"
+                alt="Cursos de Belleza"
+                width={400}
+                height={300}
+                className="w-full aspect-[4/3] rounded-md object-cover"
+              />
             </div>
             <div>
               <h3 className="text-2xl font-semibold mb-3">Cursos de Belleza — 3 meses</h3>
@@ -308,14 +367,26 @@ export default function HomePage() {
               </div>
             </div>
             <div>
-              <div className="w-full aspect-[4/3] rounded-lg bg-[color:var(--muted)] flex items-center justify-center">Foto Inglés (placeholder)</div>
+              <Image
+                src="/images/campus/IMG-20251021-WA0066.jpg"
+                alt="Inglés Intensivo"
+                width={400}
+                height={300}
+                className="w-full aspect-[4/3] rounded-lg object-cover"
+              />
             </div>
           </div>
 
           {/* Workshops & special modules - image left */}
           <div className="grid md:grid-cols-2 items-center gap-8 bg-white rounded-lg p-8">
             <div>
-              <div className="w-full aspect-[4/3] rounded-lg bg-[color:var(--muted)] flex items-center justify-center">Foto Talleres (placeholder)</div>
+              <Image
+                src="/images/campus/IMG-20251021-WA0074.jpg"
+                alt="Talleres y Certificaciones"
+                width={400}
+                height={300}
+                className="w-full aspect-[4/3] rounded-lg object-cover"
+              />
             </div>
             <div>
               <h3 className="text-2xl font-semibold mb-3">Talleres Especiales y Certificaciones</h3>
