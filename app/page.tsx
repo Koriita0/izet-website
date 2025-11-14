@@ -214,12 +214,14 @@ export default function HomePage() {
               <div>
               <h4 className="font-semibold mb-3">Ubicación</h4>
               <p className="text-gray-700 text-sm mb-4">Zacatecas, México. Campus con acceso cercano a transporte público y servicios.</p>
-              <Image
+              <Image 
                 src="/seleccionIZET/IZET/ubicacion.jpg"
+                alt="Ubicación de IZET en Zacatecas"
                 width={400}
                 height={300}
                 className="w-full aspect-[4/3] rounded-md object-cover"
               />
+
             </div>
             </div>
           </div>
