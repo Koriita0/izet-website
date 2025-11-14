@@ -1,12 +1,16 @@
+import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, Clock, GraduationCap } from "lucide-react"
+import { CheckCircle, Clock, GraduationCap, ArrowLeft } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { ArrowLeft } from "lucide-react"
+
 
 export default function BellezaIntegralPage() {
+  const asistenteEducativoFotos = ["IMG-20251021-WA0049", "IMG-20251021-WA0056", "IMG-20251021-WA0047"]
+  const bellezaFotos = ["IMG-20251021-WA0115", "IMG-20251021-WA0128", "IMG-20251021-WA0130", "IMG-20251021-WA0132", "IMG-20251021-WA0117"]
+  const barberiaFotos = ["IMG-20251021-WA0075", "IMG-20251107-WA0019", "IMG-20251107-WA0015", "IMG-20251107-WA0014", "IMG-20251107-WA0016"]
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -90,14 +94,21 @@ export default function BellezaIntegralPage() {
               </Card>
             </div>
 
-            {/* Plan de Estudios */}
+            {/* Plan de Estudios */} 
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Plan de Estudios</h2>
               <div className="bg-white rounded-lg border-2 border-[color:var(--primary)] p-6 mb-6">
-                <div className="w-full aspect-[16/9] rounded-lg bg-[color:var(--muted)] flex items-center justify-center">
-                  <div className="text-gray-500">Espacio para fotografía (plan de estudios) — reemplazar</div>
+                <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden bg-[color:var(--muted)]">
+                  <Image
+                    src="/seleccionIZET/Belleza/plan de estudios.png"
+                    alt="Plan de estudios de la carrera técnica en Belleza Integral"
+                    fill
+                    className="object-contain md:object-cover"
+                    priority
+                  />
                 </div>
               </div>
+
 
               <div className="grid md:grid-cols-2 gap-6">
                 <Card>
@@ -234,44 +245,76 @@ export default function BellezaIntegralPage() {
               </div>
             </div>
             
-            {/* Galería de Programas - placeholders por categoría */}
+            {/* Galería de Programas */}
             <div className="mt-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Galería</h2>
               <div className="space-y-8">
+                {/* Asistente Educativo */}
                 <div>
-                  <h3 className="font-semibold mb-4">Asistente Educativo</h3>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    {Array.from({ length: 4 }).map((_, i) => (
-                      <div key={i} className="w-full aspect-[4/3] bg-[color:var(--muted)] rounded-lg flex items-center justify-center text-gray-500">
-                        Foto (reemplazar)
+                  <h3 className="font-semibold mb-4">Espacio de trabajo</h3>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    {asistenteEducativoFotos.map((foto) => (
+                      <div
+                        key={foto}
+                        className="relative w-full aspect-[4/3] bg-[color:var(--muted)] rounded-lg overflow-hidden"
+                      >
+                        <Image
+                          src={`/seleccionIZET/Belleza/${foto}.jpg`}  // 👈 aquí va Belleza
+                          alt={`Galería Asistente Educativo - ${foto}`}
+                          fill
+                          className="object-cover"
+                        />
                       </div>
                     ))}
                   </div>
                 </div>
 
+                {/* Belleza */}
                 <div>
-                  <h3 className="font-semibold mb-4">Belleza</h3>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    {Array.from({ length: 6 }).map((_, i) => (
-                      <div key={i} className="w-full aspect-[4/3] bg-[color:var(--muted)] rounded-lg flex items-center justify-center text-gray-500">
-                        Foto (reemplazar)
+                  <h3 className="font-semibold mb-4">Maquillaje</h3>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    {bellezaFotos.map((foto) => (
+                      <div
+                        key={foto}
+                        className="relative w-full aspect-[4/3] bg-[color:var(--muted)] rounded-lg overflow-hidden"
+                      >
+                        <Image
+                          src={`/seleccionIZET/Belleza/${foto}.jpg`}  // 👈 misma carpeta
+                          alt={`Galería Belleza - ${foto}`}
+                          fill
+                          className="object-cover"
+                        />
                       </div>
                     ))}
                   </div>
                 </div>
 
+                {/* Barbería */}
                 <div>
-                  <h3 className="font-semibold mb-4">Barbería</h3>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    {Array.from({ length: 4 }).map((_, i) => (
-                      <div key={i} className="w-full aspect-[4/3] bg-[color:var(--muted)] rounded-lg flex items-center justify-center text-gray-500">
-                        Foto (reemplazar)
+                  <h3 className="font-semibold mb-4">Uñas</h3>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    {barberiaFotos.map((foto) => (
+                      <div
+                        key={foto}
+                        className="relative w-full aspect-[4/3] bg-[color:var(--muted)] rounded-lg overflow-hidden"
+                      >
+                        <Image
+                          src={`/seleccionIZET/UnasBelleza/${foto}.jpg`}  // 👈 aquí ya coincide con tu ruta
+                          alt={`Galería Barbería - ${foto}`}
+                          fill
+                          className="object-cover"
+                        />
                       </div>
                     ))}
                   </div>
                 </div>
               </div>
             </div>
+
+
+
+
+
           </div>
         </div>
       </section>

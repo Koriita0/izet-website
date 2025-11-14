@@ -42,7 +42,7 @@ export default function HomePage() {
             </div>
             <div className="relative">
               <Image
-                src="/images/campus/IMG-20251021-WA0027.jpg"
+                src="/seleccionIZET/IZET/logoIZET.jpg"
                 alt="Campus IZET"
                 width={600}
                 height={400}
@@ -215,8 +215,7 @@ export default function HomePage() {
               <h4 className="font-semibold mb-3">Ubicación</h4>
               <p className="text-gray-700 text-sm mb-4">Zacatecas, México. Campus con acceso cercano a transporte público y servicios.</p>
               <Image
-                src="/images/campus/IMG-20251021-WA0075.jpg"
-                alt="Ubicación Campus IZET"
+                src="/seleccionIZET/IZET/ubicacion.jpg"
                 width={400}
                 height={300}
                 className="w-full aspect-[4/3] rounded-md object-cover"

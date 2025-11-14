@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -5,7 +6,13 @@ import { ArrowLeft, CheckCircle, Clock, GraduationCap } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 
+
+
+
 export default function AsistenteEducativoPage() {
+  
+  const fotosGaleria = ["IMG-20251024-WA0015", "IMG-20251024-WA0043", "IMG-20251107-WA0097", "IMG-20251107-WA0098", "IMG-20251107-WA0099"]
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -71,19 +78,30 @@ export default function AsistenteEducativoPage() {
                 <li>- Primeros auxilios y cuidado básico</li>
                 <li>- Comunicación y trabajo con familias</li>
               </ul>
-              <p className="text-sm text-gray-600 mt-4">Perfil de egreso: capacidad de diseñar actividades educativas, cuidar y apoyar el desarrollo integral de la infancia.</p>
+              <p className="text-sm text-gray-600 mt-4">
+                Perfil de egreso: capacidad de diseñar actividades educativas, cuidar y apoyar el desarrollo integral de la infancia.
+              </p>
             </div>
 
-            {/* Espacios para imágenes */}
+            {/* Galería (placeholders con foto1, foto2, foto3) */}
             <div className="mb-12">
-              <h3 className="text-2xl font-semibold mb-4">Galería (placeholders)</h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {Array.from({ length: 6 }).map((_, i) => (
-                  <div key={i} className="w-full aspect-[4/3] bg-[color:var(--muted)] rounded-lg flex items-center justify-center text-gray-500">
-                    Foto (reemplazar)
+              <h3 className="text-2xl font-semibold mb-4">Galería</h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {fotosGaleria.map((foto) => (
+                  <div
+                    key={foto}
+                    className="relative w-full aspect-[4/3] bg-[color:var(--muted)] rounded-lg overflow-hidden"
+                  >
+                    <Image
+                      src={`/seleccionIZET/AsistenteEducativo/${foto}.jpg`} 
+                      alt={`Galería Asistente Educativo - ${foto}`}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                 ))}
               </div>
+              
             </div>
 
             <div className="grid md:grid-cols-3 gap-6 mb-12">

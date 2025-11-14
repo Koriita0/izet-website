@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -18,21 +19,35 @@ export default function PreparatoriaPage() {
             <div className="decorative-blob blob-2 -right-20 -top-8" />
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h1 className="text-4xl md:text-5xl font-bold text-[color:var(--foreground)] mb-4">Preparatoria <span className="text-[color:var(--primary)]">IZET</span></h1>
-                <p className="text-lg text-gray-600 mb-4">Obtén tu certificado oficial de preparatoria en solo 2 años con acompañamiento académico y prácticas formativas.</p>
+                <h1 className="text-4xl md:text-5xl font-bold text-[color:var(--foreground)] mb-4">
+                  Preparatoria <span className="text-[color:var(--primary)]">IZET</span>
+                </h1>
+                <p className="text-lg text-gray-600 mb-4">
+                  Obtén tu certificado oficial de preparatoria en solo 2 años con acompañamiento académico y prácticas formativas.
+                </p>
                 <p className="text-sm text-[color:var(--muted-foreground)] mb-6">RVOE: 0532BG250320</p>
                 <div className="flex flex-wrap gap-4">
                   <Link href="/inscripcion">
-                    <Button size="lg" className="bg-[color:var(--primary)] hover:brightness-90 text-white">Inscríbete Ahora</Button>
+                    <Button size="lg" className="bg-[color:var(--primary)] hover:brightness-90 text-white">
+                      Inscríbete Ahora
+                    </Button>
                   </Link>
                   <Link href="/#contacto">
-                    <Button size="lg" variant="outline" className="border-[color:var(--primary)] text-[color:var(--primary)]">Contacto</Button>
+                    <Button size="lg" variant="outline" className="border-[color:var(--primary)] text-[color:var(--primary)]">
+                      Contacto
+                    </Button>
                   </Link>
                 </div>
               </div>
               <div className="relative">
-                <div className="w-full aspect-[16/9] rounded-lg shadow-lg image-placeholder">
-                  Foto (reemplazar)
+                <div className="relative w-full aspect-[16/9] rounded-lg shadow-lg overflow-hidden image-placeholder">
+                  
+                  <Image
+                    src="estudiantes-mexicanos-felices-en-instituto-t-cnico.jpg"
+                    alt="Preparatoria IZET - portada"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
             </div>
@@ -44,7 +59,9 @@ export default function PreparatoriaPage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Ventajas de Estudiar con Nosotros</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+              Ventajas de Estudiar con Nosotros
+            </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="border-2 border-red-100">
                 <CardContent className="p-6">
@@ -99,11 +116,21 @@ export default function PreparatoriaPage() {
             <div className="bg-white rounded-lg p-6 border-2 border-[color:var(--primary)] mb-12">
               <div className="grid md:grid-cols-2 gap-6 items-center">
                 <div>
-                  <div className="w-full aspect-[4/3] rounded-lg bg-[color:var(--muted)] flex items-center justify-center">Foto (plan de estudios)</div>
+                  <div className="relative w-full aspect-[4/3] rounded-lg bg-[color:var(--muted)] overflow-hidden flex items-center justify-center">
+                    <Image
+                      src="planestudiosprepa.png"
+                      alt="Plan de estudios Preparatoria IZET"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-3">Estructura y Materias</h3>
-                  <p className="text-gray-700 mb-2">En nuestra Preparatoria ofrecemos un plan educativo equilibrado con materias básicas y optativas que fomentan el pensamiento crítico, las habilidades digitales y la formación humana.</p>
+                  <p className="text-gray-700 mb-2">
+                    En nuestra Preparatoria ofrecemos un plan educativo equilibrado con materias básicas y optativas
+                    que fomentan el pensamiento crítico, las habilidades digitales y la formación humana.
+                  </p>
                   <ul className="list-disc pl-5 text-gray-700 space-y-1">
                     <li>Matemáticas y Ciencias</li>
                     <li>Lengua y Comunicación</li>
@@ -149,36 +176,69 @@ export default function PreparatoriaPage() {
         </div>
       </section>
 
-        {/* Alternating content blocks with image placeholders */}
-        <section className="py-12 bg-[color:var(--secondary)]">
-          <div className="container mx-auto px-4 max-w-6xl">
-            <div className="space-y-12">
-              <div className="section-split">
-                <div>
-                  <h3 className="text-2xl font-semibold mb-3">Acompañamiento Académico</h3>
-                  <p className="text-gray-700">Tutorías personalizadas, monitoreo de avance y asesoría para la continuidad académica. Nuestro equipo docente apoya a estudiantes con horarios flexibles para trabajadores.</p>
-                </div>
-                <div className="image-placeholder w-full aspect-[4/3]">Foto (reemplazar)</div>
+      {/* Alternating content blocks with image placeholders */}
+      <section className="py-12 bg-[color:var(--secondary)]">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="space-y-12">
+            <div className="section-split">
+              <div>
+                <h3 className="text-2xl font-semibold mb-3">Acompañamiento Académico</h3>
+                <p className="text-gray-700">
+                  Tutorías personalizadas, monitoreo de avance y asesoría para la continuidad académica. Nuestro equipo
+                  docente apoya a estudiantes con horarios flexibles para trabajadores.
+                </p>
               </div>
-
-              <div className="section-split">
-                <div className="image-placeholder w-full aspect-[4/3]">Foto (reemplazar)</div>
-                <div>
-                  <h3 className="text-2xl font-semibold mb-3">Instalaciones y Talleres</h3>
-                  <p className="text-gray-700">Aulas equipadas, laboratorio de cómputo y espacios para talleres prácticos. Los talleres fomentan habilidades técnicas y creativas que complementan la formación general.</p>
-                </div>
+              <div className="relative image-placeholder w-full aspect-[4/3] overflow-hidden">
+                {/* 👇 AQUÍ CAMBIAS LA FOTO DE ACOMPAÑAMIENTO */}
+                <Image
+                  src="IMG-20251021-WA0175.jpg"
+                  alt="Acompañamiento académico"
+                  fill
+                  className="object-cover"
+                />
               </div>
+            </div>
 
-              <div className="section-split">
-                <div>
-                  <h3 className="text-2xl font-semibold mb-3">Becas y Apoyos</h3>
-                  <p className="text-gray-700">Contamos con opciones de becas parciales y facilidades de pago. Habla con nuestras oficina de inscripciones para conocer promociones y apoyos disponibles.</p>
-                </div>
-                <div className="image-placeholder w-full aspect-[4/3]">Foto (reemplazar)</div>
+            <div className="section-split">
+              <div className="relative image-placeholder w-full aspect-[4/3] overflow-hidden">
+                {/* 👇 AQUÍ CAMBIAS LA FOTO DE INSTALACIONES */}
+                <Image
+                  src="/seleccionIZET/IZET/IMG-20251021-WA0066.jpg"
+                  alt="Instalaciones y talleres"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <h3 className="text-2xl font-semibold mb-3">Instalaciones y Talleres</h3>
+                <p className="text-gray-700">
+                  Aulas equipadas, laboratorio de cómputo y espacios para talleres prácticos. Los talleres fomentan
+                  habilidades técnicas y creativas que complementan la formación general.
+                </p>
+              </div>
+            </div>
+
+            <div className="section-split">
+              <div>
+                <h3 className="text-2xl font-semibold mb-3">Becas y Apoyos</h3>
+                <p className="text-gray-700">
+                  Contamos con opciones de becas parciales y facilidades de pago. Habla con nuestras oficina de
+                  inscripciones para conocer promociones y apoyos disponibles.
+                </p>
+              </div>
+              <div className="relative image-placeholder w-full aspect-[4/3] overflow-hidden">
+                {/* 👇 AQUÍ CAMBIAS LA FOTO DE BECAS */}
+                <Image
+                  src="/ruta/a/tu/imagen-becas.jpg"
+                  alt="Becas y apoyos"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-red-600 text-white">
@@ -193,7 +253,11 @@ export default function PreparatoriaPage() {
                 </Button>
               </Link>
               <Link href="/#contacto">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-red-700 bg-transparent">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-white hover:bg-red-700 bg-transparent"
+                >
                   Contactar
                 </Button>
               </Link>

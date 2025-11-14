@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -5,7 +6,12 @@ import { CheckCircle, Clock, GraduationCap } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 
+
+
+
 export default function BarberoProfesionalPage() {
+  const fotosGaleria = ["IMG-20251021-WA0054", "IMG-20251021-WA0055", "IMG-20251021-WA0074", "IMG-20251021-WA0082", "IMG-20251107-WA0067"]
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -54,15 +60,25 @@ export default function BarberoProfesionalPage() {
               </ul>
             </div>
 
+            {/* Galería con placeholders foto1, foto2, foto3 */}
             <div className="mb-12">
-              <h3 className="text-2xl font-semibold mb-4">Galería (placeholders)</h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {Array.from({ length: 6 }).map((_, i) => (
-                  <div key={i} className="w-full aspect-[4/3] bg-[color:var(--muted)] rounded-lg flex items-center justify-center text-gray-500">
-                    Foto (reemplazar)
+              <h3 className="text-2xl font-semibold mb-4">Galería</h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {fotosGaleria.map((foto) => (
+                  <div
+                    key={foto}
+                    className="relative w-full aspect-[4/3] bg-[color:var(--muted)] rounded-lg overflow-hidden"
+                  >
+                    <Image
+                      src={`/seleccionIZET/BarberoProfesional/${foto}.jpg`}
+                      alt={`Galería Barbero Profesional - ${foto}`}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                 ))}
               </div>
+              
             </div>
 
             <div className="grid md:grid-cols-3 gap-6 mb-12">
