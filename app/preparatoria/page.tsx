@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -18,21 +19,44 @@ export default function PreparatoriaPage() {
             <div className="decorative-blob blob-2 -right-20 -top-8" />
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h1 className="text-4xl md:text-5xl font-bold text-[color:var(--foreground)] mb-4">Preparatoria <span className="text-[color:var(--primary)]">IZET</span></h1>
-                <p className="text-lg text-gray-600 mb-4">Obtén tu certificado oficial de preparatoria en solo 2 años con acompañamiento académico y prácticas formativas.</p>
-                <p className="text-sm text-[color:var(--muted-foreground)] mb-6">RVOE: 0532BG250320</p>
+                <h1 className="text-4xl md:text-5xl font-bold text-[color:var(--foreground)] mb-4">
+                  Preparatoria <span className="text-[color:var(--primary)]">IZET</span>
+                </h1>
+                <p className="text-lg text-gray-600 mb-4">
+                  Obtén tu certificado oficial de preparatoria en solo 2 años con acompañamiento
+                  académico y prácticas formativas.
+                </p>
+                <p className="text-sm text-[color:var(--muted-foreground)] mb-6">
+                  RVOE: 0532BG250320
+                </p>
                 <div className="flex flex-wrap gap-4">
                   <Link href="/inscripcion">
-                    <Button size="lg" className="bg-[color:var(--primary)] hover:brightness-90 text-white">Inscríbete Ahora</Button>
+                    <Button
+                      size="lg"
+                      className="bg-[color:var(--primary)] hover:brightness-90 text-white"
+                    >
+                      Inscríbete Ahora
+                    </Button>
                   </Link>
                   <Link href="/#contacto">
-                    <Button size="lg" variant="outline" className="border-[color:var(--primary)] text-[color:var(--primary)]">Contacto</Button>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-[color:var(--primary)] text-[color:var(--primary)]"
+                    >
+                      Contacto
+                    </Button>
                   </Link>
                 </div>
               </div>
               <div className="relative">
-                <div className="w-full aspect-[16/9] rounded-lg shadow-lg image-placeholder">
-                  Foto (reemplazar)
+                <div className="relative w-full aspect-[16/9] rounded-lg shadow-lg overflow-hidden image-placeholder">
+                  <Image
+                    src="estudiantes-mexicanos-felices-en-instituto-t-cnico.jpg"
+                    alt="Preparatoria IZET - portada"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
             </div>
@@ -44,7 +68,9 @@ export default function PreparatoriaPage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Ventajas de Estudiar con Nosotros</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+              Ventajas de Estudiar con Nosotros
+            </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="border-2 border-red-100">
                 <CardContent className="p-6">
@@ -57,11 +83,15 @@ export default function PreparatoriaPage() {
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-red-600 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700">Duración de solo 2 años (6 cuatrimestres)</span>
+                      <span className="text-gray-700">
+                        Duración de solo 2 años (6 cuatrimestres)
+                      </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-red-600 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700">Horarios flexibles adaptados a tus necesidades</span>
+                      <span className="text-gray-700">
+                        Horarios flexibles adaptados a tus necesidades
+                      </span>
                     </li>
                   </ul>
                 </CardContent>
@@ -72,15 +102,21 @@ export default function PreparatoriaPage() {
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-red-600 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700">Docentes altamente capacitados y comprometidos</span>
+                      <span className="text-gray-700">
+                        Docentes altamente capacitados y comprometidos
+                      </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-red-600 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700">Ideal para jóvenes y adultos que trabajan</span>
+                      <span className="text-gray-700">
+                        Ideal para jóvenes y adultos que trabajan
+                      </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-red-600 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700">Grupos reducidos de máximo 15 alumnos</span>
+                      <span className="text-gray-700">
+                        Grupos reducidos de máximo 15 alumnos
+                      </span>
                     </li>
                   </ul>
                 </CardContent>
@@ -90,58 +126,171 @@ export default function PreparatoriaPage() {
         </div>
       </section>
 
-      {/* Curriculum Section */}
+      {/* Curriculum Section – recuadros claros para plan de estudios + modalidad */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Plan de Estudios</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
+              Plan de Estudios
+            </h2>
+            <p className="text-gray-600 text-center max-w-3xl mx-auto mb-12">
+              La preparatoria IZET está organizada en 6 cuatrimestres que combinan áreas
+              científicas, humanísticas y de formación integral para prepararte al mundo
+              laboral o a estudios superiores.
+            </p>
 
-            <div className="bg-white rounded-lg p-6 border-2 border-[color:var(--primary)] mb-12">
-              <div className="grid md:grid-cols-2 gap-6 items-center">
-                <div>
-                  <div className="w-full aspect-[4/3] rounded-lg bg-[color:var(--muted)] flex items-center justify-center">Foto (plan de estudios)</div>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-3">Estructura y Materias</h3>
-                  <p className="text-gray-700 mb-2">En nuestra Preparatoria ofrecemos un plan educativo equilibrado con materias básicas y optativas que fomentan el pensamiento crítico, las habilidades digitales y la formación humana.</p>
-                  <ul className="list-disc pl-5 text-gray-700 space-y-1">
-                    <li>Matemáticas y Ciencias</li>
-                    <li>Lengua y Comunicación</li>
-                    <li>Historia, Filosofía y Ética</li>
-                    <li>Talleres: Teatro, Cultura Digital, Educación Física</li>
+            {/* Recuadros de cuatrimestres */}
+            <div className="grid md:grid-cols-3 gap-6 mb-16">
+              {/* PRIMER CUATRIMESTRE */}
+              <Card className="bg-white/80 border border-red-100 rounded-2xl shadow-sm">
+                <CardContent className="p-6">
+                  <div className="inline-flex items-center gap-2 mb-3">
+                    <BookOpen className="w-5 h-5 text-red-600" />
+                    <span className="text-xs font-semibold text-red-700 uppercase tracking-wide">
+                      Primer cuatrimestre
+                    </span>
+                  </div>
+                  <ul className="space-y-1 text-sm text-gray-800">
+                    <li>Matemáticas I</li>
+                    <li>Ciencias Sociales I</li>
+                    <li>Cultura Digital I</li>
+                    <li>Lengua y Comunicación I</li>
+                    <li>Inglés I</li>
+                    <li>Humanidades I</li>
+                    <li>Educación Física</li>
+                    <li>Teatro</li>
                   </ul>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
+
+              {/* SEGUNDO CUATRIMESTRE */}
+              <Card className="bg-white/80 border border-red-100 rounded-2xl shadow-sm">
+                <CardContent className="p-6">
+                  <div className="inline-flex items-center gap-2 mb-3">
+                    <BookOpen className="w-5 h-5 text-red-600" />
+                    <span className="text-xs font-semibold text-red-700 uppercase tracking-wide">
+                      Segundo cuatrimestre
+                    </span>
+                  </div>
+                  <ul className="space-y-1 text-sm text-gray-800">
+                    <li>Matemáticas II</li>
+                    <li>Ciencias Sociales II</li>
+                    <li>Cultura Digital II</li>
+                    <li>Lengua y Comunicación II</li>
+                    <li>Inglés II</li>
+                    <li>Humanidades II</li>
+                    <li>Educación Física</li>
+                    <li>Teatro</li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* TERCER CUATRIMESTRE */}
+              <Card className="bg-white/80 border border-red-100 rounded-2xl shadow-sm">
+                <CardContent className="p-6">
+                  <div className="inline-flex items-center gap-2 mb-3">
+                    <BookOpen className="w-5 h-5 text-red-600" />
+                    <span className="text-xs font-semibold text-red-700 uppercase tracking-wide">
+                      Tercer cuatrimestre
+                    </span>
+                  </div>
+                  <ul className="space-y-1 text-sm text-gray-800">
+                    <li>Matemáticas III</li>
+                    <li>Lengua y Comunicación III</li>
+                    <li>Inglés III</li>
+                    <li>Humanidades III</li>
+                    <li>Taller de Ciencias I</li>
+                    <li>Educación Física</li>
+                    <li>Teatro</li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* CUARTO CUATRIMESTRE */}
+              <Card className="bg-white/80 border border-red-100 rounded-2xl shadow-sm">
+                <CardContent className="p-6">
+                  <div className="inline-flex items-center gap-2 mb-3">
+                    <BookOpen className="w-5 h-5 text-red-600" />
+                    <span className="text-xs font-semibold text-red-700 uppercase tracking-wide">
+                      Cuarto cuatrimestre
+                    </span>
+                  </div>
+                  <ul className="space-y-1 text-sm text-gray-800">
+                    <li>Reacciones químicas básicas</li>
+                    <li>Conciencia histórica I</li>
+                    <li>Cultura Digital III</li>
+                    <li>Temas selectos de matemáticas I</li>
+                    <li>Inglés IV</li>
+                    <li>Educación Física</li>
+                    <li>Teatro</li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* QUINTO CUATRIMESTRE */}
+              <Card className="bg-white/80 border border-red-100 rounded-2xl shadow-sm">
+                <CardContent className="p-6">
+                  <div className="inline-flex items-center gap-2 mb-3">
+                    <BookOpen className="w-5 h-5 text-red-600" />
+                    <span className="text-xs font-semibold text-red-700 uppercase tracking-wide">
+                      Quinto cuatrimestre
+                    </span>
+                  </div>
+                  <ul className="space-y-1 text-sm text-gray-800">
+                    <li>Energía en procesos cotidianos</li>
+                    <li>Conciencia histórica II</li>
+                    <li>Inglés V</li>
+                    <li>Probabilidad y estadística I</li>
+                    <li>Derecho y sociedad I</li>
+                    <li>Arte y cultura I</li>
+                    <li>Educación Física</li>
+                    <li>Teatro</li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* SEXTO CUATRIMESTRE */}
+              <Card className="bg-white/80 border border-red-100 rounded-2xl shadow-sm">
+                <CardContent className="p-6">
+                  <div className="inline-flex items-center gap-2 mb-3">
+                    <BookOpen className="w-5 h-5 text-red-600" />
+                    <span className="text-xs font-semibold text-red-700 uppercase tracking-wide">
+                      Sexto cuatrimestre
+                    </span>
+                  </div>
+                  <ul className="space-y-1 text-sm text-gray-800">
+                    <li>Organismo: estructuras y procesos</li>
+                    <li>Conciencia histórica III</li>
+                    <li>Temas selectos de matemáticas II</li>
+                    <li>Inglés VI</li>
+                    <li>Probabilidad y estadística II</li>
+                    <li>Derecho y sociedad II</li>
+                    <li>Arte y cultura II</li>
+                    <li>Educación Física</li>
+                  </ul>
+                </CardContent>
+              </Card>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6">
-              <Card>
-                <CardContent className="p-6 text-center">
-                  <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <BookOpen className="w-8 h-8 text-red-600" />
+            {/* Modalidad, duración y validez */}
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+              Modalidad, duración y validez
+            </h3>
+            <div className="max-w-3xl mx-auto">
+              <Card className="bg-white border-2 border-red-100 rounded-3xl shadow-sm">
+                <CardContent className="p-8 text-center space-y-4">
+                  <div className="inline-flex px-6 py-2 rounded-full bg-red-600 text-white font-semibold tracking-wide">
+                    ESCOLARIZADO
                   </div>
-                  <h3 className="font-bold text-gray-900 mb-2">Materias Básicas</h3>
-                  <p className="text-sm text-gray-600">Matemáticas, Ciencias, Lengua y Comunicación</p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="p-6 text-center">
-                  <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <GraduationCap className="w-8 h-8 text-red-600" />
-                  </div>
-                  <h3 className="font-bold text-gray-900 mb-2">Humanidades</h3>
-                  <p className="text-sm text-gray-600">Historia, Filosofía, Arte y Cultura</p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="p-6 text-center">
-                  <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Clock className="w-8 h-8 text-red-600" />
-                  </div>
-                  <h3 className="font-bold text-gray-900 mb-2">Talleres</h3>
-                  <p className="text-sm text-gray-600">Educación Física, Teatro, Cultura Digital</p>
+                  <p className="text-gray-700 text-sm md:text-base">
+                    Estudia de <span className="font-semibold">martes a viernes</span> en un ambiente
+                    académico cercano y acompañado.
+                  </p>
+                  <p className="text-gray-700 text-sm md:text-base">
+                    La preparatoria tiene una <span className="font-semibold">duración de 2 años</span> y
+                    cuenta con <span className="font-semibold">RVOE 0532BG250320</span>, con validez oficial
+                    en toda la República Mexicana.
+                  </p>
                 </CardContent>
               </Card>
             </div>
@@ -149,51 +298,94 @@ export default function PreparatoriaPage() {
         </div>
       </section>
 
-        {/* Alternating content blocks with image placeholders */}
-        <section className="py-12 bg-[color:var(--secondary)]">
-          <div className="container mx-auto px-4 max-w-6xl">
-            <div className="space-y-12">
-              <div className="section-split">
-                <div>
-                  <h3 className="text-2xl font-semibold mb-3">Acompañamiento Académico</h3>
-                  <p className="text-gray-700">Tutorías personalizadas, monitoreo de avance y asesoría para la continuidad académica. Nuestro equipo docente apoya a estudiantes con horarios flexibles para trabajadores.</p>
-                </div>
-                <div className="image-placeholder w-full aspect-[4/3]">Foto (reemplazar)</div>
+      {/* Alternating content blocks with image placeholders */}
+      <section className="py-12 bg-[color:var(--secondary)]">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="space-y-12">
+            <div className="section-split">
+              <div>
+                <h3 className="text-2xl font-semibold mb-3">Acompañamiento Académico</h3>
+                <p className="text-gray-700">
+                  Tutorías personalizadas, monitoreo de avance y asesoría para la continuidad
+                  académica. Nuestro equipo docente apoya a estudiantes con horarios flexibles
+                  para trabajadores.
+                </p>
               </div>
-
-              <div className="section-split">
-                <div className="image-placeholder w-full aspect-[4/3]">Foto (reemplazar)</div>
-                <div>
-                  <h3 className="text-2xl font-semibold mb-3">Instalaciones y Talleres</h3>
-                  <p className="text-gray-700">Aulas equipadas, laboratorio de cómputo y espacios para talleres prácticos. Los talleres fomentan habilidades técnicas y creativas que complementan la formación general.</p>
-                </div>
+              <div className="relative image-placeholder w-full aspect-[4/3] overflow-hidden">
+                <Image
+                  src="IMG-20251021-WA0175.jpg"
+                  alt="Acompañamiento académico"
+                  fill
+                  className="object-cover"
+                />
               </div>
+            </div>
 
-              <div className="section-split">
-                <div>
-                  <h3 className="text-2xl font-semibold mb-3">Becas y Apoyos</h3>
-                  <p className="text-gray-700">Contamos con opciones de becas parciales y facilidades de pago. Habla con nuestras oficina de inscripciones para conocer promociones y apoyos disponibles.</p>
-                </div>
-                <div className="image-placeholder w-full aspect-[4/3]">Foto (reemplazar)</div>
+            <div className="section-split">
+              <div className="relative image-placeholder w-full aspect-[4/3] overflow-hidden">
+                <Image
+                  src="/seleccionIZET/IZET/IMG-20251021-WA0066.jpg"
+                  alt="Instalaciones y talleres"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <h3 className="text-2xl font-semibold mb-3">Instalaciones y Talleres</h3>
+                <p className="text-gray-700">
+                  Aulas equipadas, laboratorio de cómputo y espacios para talleres prácticos.
+                  Los talleres fomentan habilidades técnicas y creativas que complementan la
+                  formación general.
+                </p>
+              </div>
+            </div>
+
+            <div className="section-split">
+              <div>
+                <h3 className="text-2xl font-semibold mb-3">Becas y Apoyos</h3>
+                <p className="text-gray-700">
+                  Contamos con opciones de becas parciales y facilidades de pago. Habla con
+                  nuestra oficina de inscripciones para conocer promociones y apoyos
+                  disponibles.
+                </p>
+              </div>
+              <div className="relative image-placeholder w-full aspect-[4/3] overflow-hidden">
+                <Image
+                  src="/seleccionIZET/IZET/BecaIZET.png"
+                  alt="Becas y apoyos"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-red-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">¿Listo para Comenzar?</h2>
-            <p className="text-xl mb-8 text-red-100">Inscripciones abiertas. Aparta tu lugar hoy mismo.</p>
+            <p className="text-xl mb-8 text-red-100">
+              Inscripciones abiertas. Aparta tu lugar hoy mismo.
+            </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link href="/inscripcion">
-                <Button size="lg" variant="secondary" className="bg-white text-red-600 hover:bg-gray-100">
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  className="bg-white text-red-600 hover:bg-gray-100"
+                >
                   Ver Requisitos de Inscripción
                 </Button>
               </Link>
               <Link href="/#contacto">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-red-700 bg-transparent">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-white hover:bg-red-700 bg-transparent"
+                >
                   Contactar
                 </Button>
               </Link>
