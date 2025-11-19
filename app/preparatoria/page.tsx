@@ -151,13 +151,14 @@ export default function PreparatoriaPage() {
                     </span>
                   </div>
                   <ul className="space-y-1 text-sm text-gray-800">
-                    <li>Matemáticas I</li>
-                    <li>Ciencias Sociales I</li>
-                    <li>Cultura Digital I</li>
-                    <li>Lengua y Comunicación I</li>
+                    <li>La materia y sus interacciones</li>
+                    <li>Ciencias sociales I</li>
+                    <li>Cultura digital I</li>
+                    <li>Pensamiento matemático I</li>
+                    <li>Lengua y comunicación I</li>
                     <li>Inglés I</li>
                     <li>Humanidades I</li>
-                    <li>Educación Física</li>
+                    <li>Educación física</li>
                     <li>Teatro</li>
                   </ul>
                 </CardContent>
@@ -173,13 +174,14 @@ export default function PreparatoriaPage() {
                     </span>
                   </div>
                   <ul className="space-y-1 text-sm text-gray-800">
-                    <li>Matemáticas II</li>
-                    <li>Ciencias Sociales II</li>
-                    <li>Cultura Digital II</li>
-                    <li>Lengua y Comunicación II</li>
+                    <li>Conservación de la energía y sus interacciones con la materia</li>
+                    <li>Ciencias sociales II</li>
+                    <li>Cultura digital II</li>
+                    <li>Pensamiento matemático II</li>
+                    <li>Lengua y comunicación II</li>
                     <li>Inglés II</li>
                     <li>Humanidades II</li>
-                    <li>Educación Física</li>
+                    <li>Educación física</li>
                     <li>Teatro</li>
                   </ul>
                 </CardContent>
@@ -195,12 +197,13 @@ export default function PreparatoriaPage() {
                     </span>
                   </div>
                   <ul className="space-y-1 text-sm text-gray-800">
-                    <li>Matemáticas III</li>
-                    <li>Lengua y Comunicación III</li>
+                    <li>Ecosistemas: interacciones, energía y dinámica</li>
+                    <li>Pensamiento matemático III</li>
+                    <li>Lengua y comunicación III</li>
                     <li>Inglés III</li>
                     <li>Humanidades III</li>
-                    <li>Taller de Ciencias I</li>
-                    <li>Educación Física</li>
+                    <li>Taller de ciencias I</li>
+                    <li>Educación física</li>
                     <li>Teatro</li>
                   </ul>
                 </CardContent>
@@ -237,13 +240,13 @@ export default function PreparatoriaPage() {
                     </span>
                   </div>
                   <ul className="space-y-1 text-sm text-gray-800">
-                    <li>Energía en procesos cotidianos</li>
-                    <li>Conciencia histórica II</li>
+                    <li>La energía en los procesos de la vida diaria</li>
+                    <li>Conciencia histórica II. México durante el expansionismo capitalista</li>
                     <li>Inglés V</li>
-                    <li>Probabilidad y estadística I</li>
+                    <li>Taller de probabilidad y estadística I</li>
                     <li>Derecho y sociedad I</li>
                     <li>Arte y cultura I</li>
-                    <li>Educación Física</li>
+                    <li>Educación física</li>
                     <li>Teatro</li>
                   </ul>
                 </CardContent>
@@ -259,14 +262,14 @@ export default function PreparatoriaPage() {
                     </span>
                   </div>
                   <ul className="space-y-1 text-sm text-gray-800">
-                    <li>Organismo: estructuras y procesos</li>
-                    <li>Conciencia histórica III</li>
+                    <li>Organismo: estructuras y procesos. Herencia y evolución biológica</li>
+                    <li>Conciencia histórica III. La realidad actual en perspectivas históricas</li>
                     <li>Temas selectos de matemáticas II</li>
                     <li>Inglés VI</li>
-                    <li>Probabilidad y estadística II</li>
+                    <li>Taller de probabilidad y estadística II</li>
                     <li>Derecho y sociedad II</li>
                     <li>Arte y cultura II</li>
-                    <li>Educación Física</li>
+                    <li>Educación física</li>
                   </ul>
                 </CardContent>
               </Card>

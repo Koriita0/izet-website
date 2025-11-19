@@ -217,11 +217,10 @@ export default function HomePage() {
                   <button
                     key={career.name}
                     onClick={() => setCurrentCareer(index)}
-                    className={`h-2.5 w-2.5 rounded-full transition-colors ${
-                      index === currentCareer
+                    className={`h-2.5 w-2.5 rounded-full transition-colors ${index === currentCareer
                         ? "bg-[color:var(--primary)]"
                         : "bg-gray-300"
-                    }`}
+                      }`}
                     aria-label={`Ver ${career.name}`}
                   />
                 ))}
@@ -233,7 +232,7 @@ export default function HomePage() {
                   onClick={() =>
                     setCurrentCareer(
                       (currentCareer - 1 + careers.length) %
-                        careers.length,
+                      careers.length,
                     )
                   }
                 >
@@ -262,9 +261,8 @@ export default function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl font-bold mb-2">
-                <AnimatedNumber value={15} suffix="+" />
+                <div className="text-red-100">Instituto siempre  innovando</div>
               </div>
-              <div className="text-red-100">Años de Experiencia</div>
             </div>
             <div>
               <div className="text-4xl font-bold mb-2">
@@ -274,9 +272,8 @@ export default function HomePage() {
             </div>
             <div>
               <div className="text-4xl font-bold mb-2">
-                <AnimatedNumber value={500} suffix="+" />
+                <div className="text-red-100">Patria, cultura y juventud</div>
               </div>
-              <div className="text-red-100">Egresados Exitosos</div>
             </div>
             <div>
               <div className="text-4xl font-bold mb-2">
