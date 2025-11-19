@@ -66,7 +66,7 @@ export default function HomePage() {
       href: "/carreras/belleza-integral",
     },
     {
-      name: "Barbero Profesional",
+      name: "Barbería Profesional",
       description:
         "Técnicas de corte y arreglo de barba con enfoque profesional.",
       image: "/images/campus/IMG-20251021-WA0082.jpg",
@@ -98,7 +98,7 @@ export default function HomePage() {
       name: "Contador Privado",
       description:
         "Contabilidad, finanzas e impuestos para empresas y negocios.",
-      image: "/seleccionIZET/ContadorPrivado/Contadorhero.jpg",
+      image: "/seleccionIZET/ContadorPrivado/contadorhero.jpg",
       href: "/carreras/contador-privado",
     },
   ]
@@ -303,8 +303,7 @@ export default function HomePage() {
 
               <ul className="space-y-3 text-gray-700 mb-6">
                 <li>
-                  <strong>Ubicación:</strong> Zacatecas, México — campus
-                  accesible y con transporte cercano.
+                  <strong>Ubicación:</strong> Zacatecas, México — Av. Reyes Heroles, 206, Esquina Con Calle ING. Fernando Espinoza, Fraccionamiento Barros Sierra.
                 </li>
                 <li>
                   <strong>Validez:</strong> Programas con registro oficial
@@ -424,8 +423,7 @@ export default function HomePage() {
               <div>
                 <h4 className="font-semibold mb-3">Ubicación</h4>
                 <p className="text-gray-700 text-sm mb-4">
-                  Zacatecas, México. Campus con acceso cercano a
-                  transporte público y servicios.
+                  Zacatecas, México. Av. Reyes Heroles, 206, Esquina Con Calle ING. Fernando Espinoza, Fraccionamiento Barros Sierra.
                 </p>
                 <Image
                   src="/seleccionIZET/IZET/ubicacion.jpg"
@@ -533,7 +531,7 @@ export default function HomePage() {
               </div>
               <div>
                 <Image
-                  src="/images/campus/IMG-20251021-WA0054.jpg"
+                  src="/seleccionIZET/IdiomaIngles/ingles7.jpg"
                   alt="Curso Inglés Intensivo"
                   width={400}
                   height={300}
@@ -555,7 +553,7 @@ export default function HomePage() {
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-[color:var(--foreground)] mb-3">
-                  Barbero Profesional — Técnicas y emprendimiento
+                  Barbería Profesional — Técnicas y emprendimiento
                 </h3>
                 <p className="text-gray-700 mb-4">
                   Formación práctica en corte, arreglo de barba y
