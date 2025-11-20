@@ -773,7 +773,7 @@ export default function HomePage() {
                     <MapPin className="w-8 h-8 text-red-600" />
                   </div>
                   <h3 className="font-bold text-gray-900 mb-2">Ubicación</h3>
-                  <p className="text-gray-600 text-sm">Zacatecas, México</p>
+                  <p className="text-gray-600 text-sm">Av. Reyes Heroles, 206, Esquina Con Calle ING. Fernando Espinoza, Fraccionamiento Barros Sierra.</p>
                 </CardContent>
               </Card>
             </div>
