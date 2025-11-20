@@ -55,7 +55,7 @@ export function Navigation() {
                     href="/carreras/barbero-profesional"
                     className="block px-4 py-2 text-[color:var(--muted-foreground)] hover:bg-[color:var(--secondary)] hover:text-[color:var(--primary)]"
                   >
-                    Barbero Profesional
+                    Barberia Profesional
                   </Link>
                   <Link
                     href="/carreras/contador-privado"
