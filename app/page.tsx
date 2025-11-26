@@ -488,7 +488,10 @@ export default function HomePage() {
                       Más sobre Belleza
                     </Button>
                   </Link>
-                  <Button variant="outline">Solicitar Info</Button>
+                  <Link href="/#contacto">
+                    <Button variant="outline">Solicitar Info</Button>
+
+                  </Link>
                 </div>
               </div>
             </div>
@@ -516,17 +519,19 @@ export default function HomePage() {
                   <Link href="/carreras/idioma-ingles">
                     <Button
                       variant="outline"
-                      className="border-gray-900 text-gray-900"
-                    >
+                      className="bg-[color:var(--primary)] text-white">
                       Ver curso
                     </Button>
                   </Link>
-                  <Button
+                  <Link href="/inscripcion">
+                    <Button
                     variant="outline"
                     className="border-gray-900 text-gray-900"
-                  >
-                    Inscribirme
-                  </Button>
+                    >
+                      Inscribirme
+                    </Button>
+                  </Link>
+                  
                 </div>
               </div>
               <div>
@@ -567,7 +572,9 @@ export default function HomePage() {
                       Más información
                     </Button>
                   </Link>
-                  <Button variant="outline">Solicitar asesoría</Button>
+                  <Link href="/#contacto">
+                    <Button variant="outline">Solicitar  Asesoría</Button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -617,15 +624,18 @@ export default function HomePage() {
                 constancia institucional al completar.
               </p>
               <div className="flex gap-4">
-                <Button className="bg-white text-[color:var(--primary)]">
-                  Ver Horarios
-                </Button>
-                <Button
-                  variant="outline"
-                  className="border-white text-white"
-                >
-                  Inscríbete
-                </Button>
+                <Link href="/carreras/belleza-integral">
+                    <Button className="bg-white text-[color:var(--primary)]">
+                      Ver Curso
+                    </Button>
+                  </Link>
+                <Link href="/inscripcion">
+                    <Button className="bg-[color:#ffe2e2] text-white">
+                      Inscribete
+                    </Button>
+                  </Link>
+
+                
               </div>
             </div>
           </div>
@@ -649,10 +659,15 @@ export default function HomePage() {
                 <li>Material y seguimiento personalizado</li>
               </ul>
               <div className="flex gap-4">
-                <Button className="bg-[color:var(--primary)] text-white">
-                  Inscribirme
-                </Button>
-                <Button variant="outline">Solicitar Info</Button>
+                  
+                <Link href="/carreras/idioma-ingles">
+                    <Button className="bg-[color:var(--primary)] text-white">
+                      Ver curso
+                    </Button>
+                  </Link>
+                  <Link href="/inscripcion">
+                    <Button variant="outline">Inscribirme </Button>
+                  </Link>
               </div>
             </div>
             <div>
@@ -693,10 +708,14 @@ export default function HomePage() {
                 <li>Atención y fidelización de clientes</li>
               </ul>
               <div className="flex gap-4">
-                <Button className="bg-[color:var(--primary)] text-white">
-                  Ver Talleres
-                </Button>
-                <Button variant="outline">Solicitar Taller</Button>
+                <Link href="/inscripcion">
+                    <Button className="bg-[color:var(--primary)] text-white">
+                      Inscribirme
+                    </Button>
+                  </Link>
+                  <Link href="/#contacto">
+                    <Button variant="outline">Solicitar  Información </Button>
+                  </Link>
               </div>
             </div>
           </div>
