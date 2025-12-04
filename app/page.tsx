@@ -744,25 +744,33 @@ export default function HomePage() {
                   <h3 className="font-bold text-gray-900 mb-2">Teléfono</h3>
                   <div className="text-[color:var(--primary)] space-y-1">
                     <a
-                      href="tel:4922952643"
+                      href="https://wa.me/524922952643"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="hover:underline block"
                     >
                       492 295 2643
                     </a>
                     <a
-                      href="tel:4929421363"
+                      href="http://wa.me/524929421363"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="hover:underline block"
                     >
                       492 942 1363
                     </a>
                     <a
-                      href="tel:4922024303"
+                      href="http://wa.me/524922024303"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="hover:underline block"
                     >
                       492 202 4303
                     </a>
                     <a
-                      href="tel:4921307131"
+                      href="http://wa.me/524921307131"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="hover:underline block"
                     >
                       492 130 7131
@@ -797,77 +805,6 @@ export default function HomePage() {
               </Card>
             </div>
 
-            <div className="bg-gray-50 rounded-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-                Envíanos un Mensaje
-              </h3>
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Nombre
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
-                      placeholder="Tu nombre completo"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Teléfono
-                    </label>
-                    <input
-                      type="tel"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
-                      placeholder="Tu número de teléfono"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
-                    placeholder="tu@email.com"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Programa de Interés
-                  </label>
-                  <select className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent">
-                    <option>Selecciona una opción</option>
-                    <option>Preparatoria</option>
-                    <option>Belleza Integral</option>
-                    <option>Asistente Educativo</option>
-                    <option>Barbero Profesional</option>
-                    <option>Contador Privado</option>
-                    <option>Criminología</option>
-                    <option>Idioma Inglés</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Mensaje
-                  </label>
-                  <textarea
-                    rows={4}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
-                    placeholder="Cuéntanos cómo podemos ayudarte..."
-                  />
-                </div>
-                <Button
-                  type="submit"
-                  size="lg"
-                  className="w-full bg-red-600 hover:bg-red-700 text-white"
-                >
-                  Enviar Mensaje
-                </Button>
-              </form>
-            </div>
           </div>
         </div>
       </section>
